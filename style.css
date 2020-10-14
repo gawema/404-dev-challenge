@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@600&family=Space+Mono:wght@400;700&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
 body {
   min-height: 90vh;
   display: flex;
@@ -75,8 +81,19 @@ body {
 
   color: #FFFFFF;
   background: #333333;
-
   border: none;
+
+  transition: transform .3s, box-shadow .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.error-message button:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.38);
+}
+
+.error-message button:focus {
+  outline: none;
 }
 
 .footer {
